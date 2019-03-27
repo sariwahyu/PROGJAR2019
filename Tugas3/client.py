@@ -19,7 +19,6 @@ def Download():
                 data = s.recv(1024)
                 totalRecv = len(data)
                 f.write(data)
-                print totalRecv
                 while totalRecv < filesize:
                     data = s.recv(1024)
                     totalRecv += len(data)
@@ -32,7 +31,15 @@ def Download():
             print "File Does Not Exist!"
 
 def Upload():
-    print "belom hhhh"
+    # filename = raw_input("File Location (folder/filename) -> ")
+    # if filename != 'q':
+    #     s.send(filename)
+    #     data = s.recv(1024)
+    #     if data[:6] == 'EXISTS':
+    #         filesize = long(data[6:])
+    #         message = raw_input("File exists, " + str(filesize) + "Bytes, upload? (Y/N)? -> ")
+    #         ###??????
+    print "Uploading...."
 
 if __name__ == '__main__':
     while True :
