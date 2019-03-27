@@ -19,6 +19,7 @@ def Download():
                 data = s.recv(1024)
                 totalRecv = len(data)
                 f.write(data)
+                print totalRecv
                 while totalRecv < filesize:
                     data = s.recv(1024)
                     totalRecv += len(data)
