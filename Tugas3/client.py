@@ -24,6 +24,7 @@ def Download():
                     totalRecv += len(data)
                     f.write(data)
                     print "{0:.2f}".format((totalRecv / float(filesize)) * 100) + "% Done"
+
                 print "Download Complete!"
                 f.close()
         else:
@@ -39,5 +40,5 @@ if __name__ == '__main__':
             Download()
         elif command == '2':
             Upload()
-        else :
-            s.close()
+        # else :
+        #     s.close()
